@@ -1,0 +1,9 @@
+header .navbar-brand {
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+}
+
+main section {
+    background-image: linear-gradient(white, lightgrey);
+}

@@ -16,17 +16,50 @@
 <body>
     <!-- HEADER (logo + titolo + select) -->
     <header>
-
+        <!-- Contenainer navbar -->
+        <nav class="navbar navbar-dark bg-dark">
+            <!-- Contenuti navbar -->
+            <div class="container-fluid justify-content-between">
+                <!-- Logo e Titolo -->
+                <div class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="p-1 me-4" src="img/logo-boolean.png" alt="logo-boolean">
+                    <h2>Campo Minato: la Griglia</h2>
+                </div>
+                <!-- Select: seleziona difficoltà + Button: gioca -->
+                <div class="d-flex align-items-center">
+                    <span class="text-white fw-bold">Difficoltà:</span>
+                    <!-- Select: difficoltà -->
+                    <select class="form-select mx-5" name="difficoltà" id="difficoltà">
+                        <option value="1">Easy</option>
+                        <option value="2">Medium</option>
+                        <option value="3">Hard</option>
+                    </select>
+                    <!-- Button: crea il campo minato -->
+                    <button class="btn text-white border-light" id="inizia-gioco">Play</button>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <!-- MAIN (griglia) -->
+    <!-- MAIN (griglia/zona di gioco) -->
     <main>
-
+        <!-- Container padding top/bottom -->
+        <section class="py-4">
+            <!-- Container centratura  -->
+            <div class="container text-center">
+                <!-- Container GRIGLIA -->
+                <div class="ratio ratio-1x1 d-inline-block" id="griglia">
+                    <!-- contenuto JS -->
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-
+    <footer class="bg-dark text-white text-end">
+        <div class="container-fluid py-4">
+            <span>Made with &#x2764; by NicoSanji</span>
+        </div>
     </footer>
     <!-- Link JavaScript -->
     <script src="script.js"></script>
