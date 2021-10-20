@@ -72,7 +72,7 @@ function grigliaFunc(numeroBox) {
     // Calcolo per dividere equamente i box nelle righe
     let boxWidth = numeroBox / Math.sqrt(numeroBox);
 
-    // Variabile del singolo box
+    // Variabile del singolo box vuota
     let box;
 
     // Ciclo -> creo i box a seconda della scelta dell'utente e gli do uno "stile"
@@ -80,14 +80,16 @@ function grigliaFunc(numeroBox) {
 
         // Crea l'elemento html "cliccabile"
         box = document.createElement("a");
-        // Dimensiono i box con il calcolo visto in classe
+        // Stile dei box con il calcolo visto in classe (no bootstrap)
         box.style.width = (100 / boxWidth) + "%";
         box.style.height = (100 / boxWidth) + "%";
-
+        box.style.cursor = "pointer";
         // Aggiungo tutte le classi bootstrap che mi servono
         box.classList.add("d-flex", "border", "border-dark", "justify-content-center", "align-items-center", "fw-bold", "text-dark", "text-decoration-none", "user-select-none");
+        
         // Aggiungo il testo -> numero scritto in ogni box = indice/ordine da 1
         box.textContent = i;
+        
         // Inserisci il box nella row del contenitore griglia
         row.append(box);
 
@@ -99,7 +101,7 @@ function grigliaFunc(numeroBox) {
 
 /* FUNZIONE -> al click sul BOX togli/metti le classi */
 function active() {
-    
+    // THIS -> elemento che ha "scatenato" l'evento al click
     this.classList.toggle("active");
     this.classList.toggle("text-white");
 }
